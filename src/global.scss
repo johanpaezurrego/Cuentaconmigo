@@ -7,3 +7,64 @@
 
 :root { --ion-font-family: 'Inter', 'Segoe UI', Arial, sans-serif; --ion-color-primary:#2857d8; --ion-color-primary-rgb:40,87,216; --ion-color-primary-contrast:#ffffff; --ion-color-primary-contrast-rgb:255,255,255; --ion-color-primary-shade:#234cc0; --ion-color-primary-tint:#3d68dd; }
 html,body { margin:0; background:#f5f7fb; font-family:var(--ion-font-family); }
+
+/* Corrección de scroll para dispositivos Android */
+
+:host {
+  display: block;
+  height: 100%;
+  min-height: 0;
+}
+
+.app-shell {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.app-header {
+  flex: 0 0 auto;
+}
+
+.main-content {
+  flex: 1 1 auto;
+  min-height: 0;
+  height: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+  touch-action: pan-y;
+  padding-bottom: 0;
+}
+
+.page-wrap {
+  padding-bottom: 25px;
+}
+
+.form-section {
+  padding-bottom: 25px;
+}
+
+.form-card {
+  overflow: visible;
+}
+
+.form-item textarea {
+  min-height: 80px;
+  resize: vertical;
+  touch-action: pan-y;
+  pointer-events: auto;
+}
+
+.bottom-nav {
+  position: relative;
+  flex: 0 0 auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+

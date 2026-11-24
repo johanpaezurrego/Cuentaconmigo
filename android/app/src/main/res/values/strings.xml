@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Cuentaconmigo</string>
+    <string name="title_activity_main">Cuentaconmigo</string>
+    <string name="package_name">com.cuentaconmigo.app</string>
+    <string name="custom_url_scheme">com.cuentaconmigo.app</string>
+</resources>

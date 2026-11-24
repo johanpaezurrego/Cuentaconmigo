@@ -111,3 +111,57 @@ ion-content.main-content { --background:var(--page); }
 .bottom-nav button span { font-size:10px; }
 .bottom-nav button.active { color:var(--brand);font-weight:700; }
 @media(max-width:600px){.app-header{padding:0 14px}.page-wrap{padding:18px 13px 110px}.welcome-row{align-items:flex-start;flex-direction:column}.quick-actions{grid-template-columns:1fr}.summary-grid{gap:8px}.movement-item{gap:8px;padding:11px}.movement-amount{font-size:11px}}
+
+/* Corrección de desplazamiento para Android */
+html,
+body {
+  min-height: 100%;
+}
+
+.app-shell {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.app-header {
+  flex-shrink: 0;
+}
+
+.main-content {
+  flex: 1 1 auto;
+  min-height: 0;
+  height: calc(100dvh - 72px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+  touch-action: pan-y;
+  padding-bottom: 110px;
+}
+
+.form-section {
+  padding-bottom: 30px;
+}
+
+.form-card {
+  overflow: visible;
+}
+
+.form-item textarea,
+.form-item input,
+.form-item select {
+  font-size: 16px;
+  touch-action: manipulation;
+  pointer-events: auto;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+}
+
