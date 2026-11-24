@@ -1,0 +1,7 @@
+{
+  "name": "cuentaconmigo",
+  "type": "angular",
+  "integrations": {
+    "capacitor": {}
+  }
+}

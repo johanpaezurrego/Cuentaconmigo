@@ -1,0 +1,9 @@
+@import '@ionic/angular/css/core.css';
+@import '@ionic/angular/css/normalize.css';
+@import '@ionic/angular/css/structure.css';
+@import '@ionic/angular/css/typography.css';
+@import '@ionic/angular/css/display.css';
+@import '@ionic/angular/css/flex-utils.css';
+
+:root { --ion-font-family: 'Inter', 'Segoe UI', Arial, sans-serif; --ion-color-primary:#2857d8; --ion-color-primary-rgb:40,87,216; --ion-color-primary-contrast:#ffffff; --ion-color-primary-contrast-rgb:255,255,255; --ion-color-primary-shade:#234cc0; --ion-color-primary-tint:#3d68dd; }
+html,body { margin:0; background:#f5f7fb; font-family:var(--ion-font-family); }

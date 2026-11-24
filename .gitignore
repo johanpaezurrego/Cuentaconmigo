@@ -1,0 +1,26 @@
+
+# Dependencias
+node_modules/
+
+# Archivos generados
+www/
+dist/
+build/
+
+# Configuraciones locales
+.angular/
+.env
+.env.*
+
+# Archivos de Windows y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Android local
+android/local.properties
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
